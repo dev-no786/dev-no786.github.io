@@ -6,14 +6,14 @@
     font-family: 'Hk Grotesk';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/HKGrotesk-Regular.woff') format('woff');
+    src: url('../fonts/HKGrotesk-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/Jost-Regular.ttf') format('woff');
+    src: url('../fonts/Jost-Regular.ttf') format('woff');
 }
 
 * {
@@ -405,7 +405,8 @@ body:not(.user-is-tabbing) a:focus {
 
 .header {
     background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)),
-        url('./images/header.jpg');
+        url('../images/poker-header.jpg');
+
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -501,6 +502,14 @@ body:not(.user-is-tabbing) a:focus {
     margin-bottom: var(--gutter-normal);
 }
 
+.project-image {
+    display: flex;
+    padding: 0px 20px;
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+}
+
 @media(min-width: 901px) {
     .work__image-box {
         flex: 1;
@@ -512,6 +521,12 @@ body:not(.user-is-tabbing) a:focus {
     .work__code {
         height: 4rem;
     }
+}
+
+.videoInsert {
+    width: 100%;
+    height: fit-content;
+    background-size: cover;
 }
 
 /* --------------------------------------- */
@@ -545,7 +560,7 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .about__content {
-    /*display: flex;*/
+    display: flex;
     flex-direction: row-reverse;
     align-items: center;
 }

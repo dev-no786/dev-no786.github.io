@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="../images/favicon-small.png" />
+
+    <!-- Put your site title here -->
+    <title>Multiplayer Socket based Shooter</title>
+    <meta name="description" content="Websockets and NodeJs">
+    <link rel="stylesheet" href="./proj2.css"/>
+</head>
+<body>
+    <!-- ***** Header ***** -->
+
+    <header class="header" role="banner" id="top">
+
+        <!--<video autoplay muted loop>
+            <source src="../images/vid.mp4" type="video/mp4">
+        </video>-->
+
+        <div class="row">
+            <nav class="nav" role="navigation">
+                <ul class="nav__items">
+                    <li class="nav__item">
+                        <a href="../index.html#work" class="nav__link">All Work</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../index.html#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../index.html#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header__text-box row">
+            <div class="header__text">
+
+            </div>
+        </div>
+        <a href="https://docs.google.com/document/d/e/2PACX-1vTS7iZNone39DqlpWD9qJPzE8plrfCNgH3eiV0K4VBFEHps1Bn0_HAketxXn0Q1zku1PZjZoODZEQft/pub" download="document.pdf">Download Document</a>
+
+        <iframe frameborder="0" width='40%' height='800' src="https://docs.google.com/document/d/e/2PACX-1vTS7iZNone39DqlpWD9qJPzE8plrfCNgH3eiV0K4VBFEHps1Bn0_HAketxXn0Q1zku1PZjZoODZEQft/pub?embedded=true" allowfullscreen></iframe>
+        <iframe src="https://drive.google.com/file/d/1XYGsYGHFRjnLsYhuXuTJ8t9BaFQjn8CZ/preview" width="640" height="480"></iframe>
+    </header>
+
+    <script>
+        const handleFirstTab = (e) => {
+            if(e.key === 'Tab') {
+                document.body.classList.add('user-is-tabbing')
+
+                window.removeEventListener('keydown', handleFirstTab)
+                window.addEventListener('mousedown', handleMouseDownOnce)
+            }
+
+        }
+
+        const handleMouseDownOnce = () => {
+            document.body.classList.remove('user-is-tabbing')
+
+            window.removeEventListener('mousedown', handleMouseDownOnce)
+            window.addEventListener('keydown', handleFirstTab)
+        }
+
+        window.addEventListener('keydown', handleFirstTab)
+
+        const backToTopButton = document.querySelector(".back-to-top");
+        let isBackToTopRendered = false;
+
+        let alterStyles = (isBackToTopRendered) => {
+            backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
+            backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
+            backToTopButton.style.transform = isBackToTopRendered
+                ? "scale(1)"
+                : "scale(0)";
+        };
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                isBackToTopRendered = true;
+                alterStyles(isBackToTopRendered);
+            } else {
+                isBackToTopRendered = false;
+                alterStyles(isBackToTopRendered);
+            }
+        });
+    </script>
+</body>
+</html>

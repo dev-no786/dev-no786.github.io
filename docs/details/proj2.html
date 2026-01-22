@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="../images/favicon-small.png" />
+
+    <!-- Put your site title here -->
+    <title>Multiplayer Socket based Shooter</title>
+    <meta name="description" content="Websockets and NodeJs">
+    <link rel="stylesheet" href="./proj2.css"/>
+</head>
+<body>
+    <!-- ***** Header ***** -->
+
+    <header class="header" role="banner" id="top">
+
+        <!--<video autoplay muted loop>
+            <source src="../images/vid.mp4" type="video/mp4">
+        </video>-->
+
+        <div class="row">
+            <nav class="nav" role="navigation">
+                <ul class="nav__items">
+                    <li class="nav__item">
+                        <a href="../index.html#work" class="nav__link">All Work</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../index.html#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../index.html#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header__text-box row">
+            <div class="header__text">
+                <h1 class="heading-primary" align="center">
+                    <!-- Replace the following name with your name -->
+                    <span>Multiplayer Socket based Game</span>
+
+                </h1>
+                <!-- Put a small paragraph about yourself -->
+
+                <br>
+
+                <img class="project-image" src = "../images/p2-4.png"/>
+                <!--<a href="#contact" class="btn btn&#45;&#45;pink">Get in touch</a>-->
+
+            </div>
+        </div>
+
+    </header>
+
+    <main role="main">
+        <section class="work" id="work">
+            <div class="row">
+                <h2>Overview </h2>
+
+                <div class="work__boxes">
+
+                    <!-- Each div with the work__box class is a project. -->
+
+                    <div class="work__box">
+
+                        <div class="work__text">
+                            <!--<h3>Overview</h3>-->
+                            <p>
+                                Realtime shooter game using basic server-client architecture which I made from scratch using NodeJs, Express server and WS Websockets from client-server communication.
+                                About the game, it features an online deathmatch where can roam around and shoot enemies
+                                helped by the server which syncs all player's game states in realtime.<br>
+                                It also has a basic chat menu.
+                            </p>
+                            <!--
+                            <div class="work__links">
+                                <a href="https://github.com/dev-no786/WebSocket-Unity-Multiplayer-Game" target="_blank" class="link__text">
+                                    View Code at Github <span>&rarr;</span>
+                                </a>
+
+                            </div>
+                            -->
+                        </div>
+
+                        <div class="work__image-box">
+                             <video class="videoInsert" muted autoplay loop>
+                                 <source src="../images/p2-vid.webm" type="video/webm">
+                             </video>
+                            <!--<img class="work__image" src = "../images/lighthouse-report.png"/>-->
+                        </div>
+
+                    </div>
+
+                    <div class="work__text">
+                        <h3>Server [ NodeJs | Websockets ]</h3>
+                        <p>
+                            Server is made by NodeJs & Express with Websockets for messaging over the network.
+                        </p>
+
+                    </div>
+
+                    <div class="work__box">
+
+                        <div class="work__image-box">
+                            <!-- <video class="work__image" alt="Project 1" muted autoplay loop>
+                                 <source src="https://thumbs.gfycat.com/TameAthleticFulmar-mobile.mp4" type="video/mp4">
+                             </video>-->
+                            <img class="work__image" src = "../images/p2-3.png"/>
+                        </div>
+
+                    </div>
+
+                    <div class="work__text">
+                        <h3>Client [ Unity | Websockets ]</h3>
+                        <p>
+                            The player client is made in Unity3d where the players connect to NodeJS server to join game.
+                        </p>
+
+                    </div>
+
+                    <div class="work__box">
+
+                        <div class="work__image-box">
+                            <!-- <video class="work__image" alt="Project 1" muted autoplay loop>
+                                 <source src="https://thumbs.gfycat.com/TameAthleticFulmar-mobile.mp4" type="video/mp4">
+                             </video>-->
+                            <img class="work__image" src = "../images/p2-4.png"/>
+                        </div>
+
+                    </div>
+
+                    <div class="work__text">
+                        <h3>Websocket Communication</h3>
+                        <p>
+                            Players commands are communicated over the server to other players in realtime using websocket.
+                        </p>
+
+                    </div>
+
+                    <div class="work__box">
+
+                        <div class="work__image-box">
+                            <!-- <video class="work__image" alt="Project 1" muted autoplay loop>
+                                 <source src="https://thumbs.gfycat.com/TameAthleticFulmar-mobile.mp4" type="video/mp4">
+                             </video>-->
+                            <img class="work__image" src = "../images/p2-5.png"/>
+                        </div>
+
+                    </div>
+
+                    <!--<div class="work__box">
+
+                        <div>
+                            <h3>Clicky Crates</h3>
+                            Unity3d
+                            <p>
+                                A Fruit Ninja type clone.
+                                Smash those crates💥 before they go away and beware of the💣
+                            </p>
+                            <ul class="work__list">
+                                <li>Title screen that lets the user start the game</li>
+                                <li>Difficulty selection </li>
+                                <li>Implementing basic UI functionality adding Listeners</li>
+                            </ul>
+
+                        </div>
+                    </div>-->
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="#top" class="back-to-top" title="Back to Top">
+        <img src="../images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+    </a>
+
+    <script>
+        const handleFirstTab = (e) => {
+            if(e.key === 'Tab') {
+                document.body.classList.add('user-is-tabbing')
+
+                window.removeEventListener('keydown', handleFirstTab)
+                window.addEventListener('mousedown', handleMouseDownOnce)
+            }
+
+        }
+
+        const handleMouseDownOnce = () => {
+            document.body.classList.remove('user-is-tabbing')
+
+            window.removeEventListener('mousedown', handleMouseDownOnce)
+            window.addEventListener('keydown', handleFirstTab)
+        }
+
+        window.addEventListener('keydown', handleFirstTab)
+
+        const backToTopButton = document.querySelector(".back-to-top");
+        let isBackToTopRendered = false;
+
+        let alterStyles = (isBackToTopRendered) => {
+            backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
+            backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
+            backToTopButton.style.transform = isBackToTopRendered
+                ? "scale(1)"
+                : "scale(0)";
+        };
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                isBackToTopRendered = true;
+                alterStyles(isBackToTopRendered);
+            } else {
+                isBackToTopRendered = false;
+                alterStyles(isBackToTopRendered);
+            }
+        });
+    </script>
+</body>
+</html>
